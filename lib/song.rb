@@ -3,9 +3,10 @@ class Song
   @@count = 0 
   @@genres = []
   
-  def initialize(name)
+  def initialize(name, genre)
     @@count += 1 
     @name = name
+    if @@genres.include?
   end
   
   def self.count
