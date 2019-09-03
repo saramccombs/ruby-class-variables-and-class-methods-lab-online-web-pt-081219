@@ -5,11 +5,12 @@ class Song
   @@artists = []
   
   def initialize(name, artist, genre)
-    @@count += 1 
     @name = name
-    @@artists.include?(artist) ? @@artists[artist] += 1 : @@artists[artist] = 1 
-      
-    @@genres.include?(genre) ? @@genres[genre] += 1 : @@genres[genre] = 1 
+    @artist = artist
+    @genre = genre
+    @@count +=1
+    @@genres << genre
+    @@artists << artist
   end
   
   def self.count
